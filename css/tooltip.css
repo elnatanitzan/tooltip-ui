@@ -1,0 +1,94 @@
+*[data-text] {
+    position: relative;
+  }
+  *[data-text]::before {
+    content: attr(data-text);
+    font-size: 0.9rem;
+    max-width: 85%;
+    color: #f4f3ee;
+    padding: 7px 10px;
+    border-radius: 4px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    transition: visibility 400ms, opacity 400ms, transform 400ms;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  *[data-text]:hover::before {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  *[data-text][data-text-top]::before {
+    transform-origin: center bottom;
+    top: -60%;
+    left: 50%;
+    background: black;
+  }
+  *[data-text][data-text-top=right]::before {
+    transform-origin: right bottom;
+    top: -60%;
+    left: 75%;
+    background: #ffd166;
+  }
+  *[data-text][data-text-top=left]::before {
+    transform-origin: left bottom;
+    top: -60%;
+    left: 25%;
+    background: #06d6a0;
+  }
+  *[data-text][data-text-bottom]::before {
+    transform-origin: center top;
+    top: 170%;
+    left: 50%;
+    background: #118ab2;
+  }
+  *[data-text][data-text-bottom=right]::before {
+    transform-origin: right top;
+    top: 170%;
+    left: 80%;
+    background: #073b4c;
+  }
+  *[data-text][data-text-bottom=left]::before {
+    transform-origin: right top;
+    top: 170%;
+    left: 20%;
+    background: #606c38;
+  }
+  *[data-text][data-text-right]::before {
+    transform-origin: center left;
+    top: 50%;
+    left: 130%;
+    background: #283618;
+  }
+  *[data-text][data-text-right=top]::before {
+    transform-origin: top left;
+    top: 50%;
+    left: 130%;
+    background: #bc6c25;
+  }
+  *[data-text][data-text-right=bottom]::before {
+    transform-origin: bottom left;
+    top: 50%;
+    left: 130%;
+    background: #7209b7;
+  }
+  *[data-text][data-text-left]::before {
+    transform-origin: center right;
+    top: 50%;
+    left: -35%;
+    background: #8a817c;
+  }
+  *[data-text][data-text-left=top]::before {
+    transform-origin: top right;
+    top: 50%;
+    left: -35%;
+    background: #00509d;
+  }
+  *[data-text][data-text-left=bottom]::before {
+    transform-origin: bottom right;
+    top: 50%;
+    left: -35%;
+    background: #e71d36;
+  }

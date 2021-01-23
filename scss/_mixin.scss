@@ -1,0 +1,8 @@
+@mixin tooltip($trans-orX, $trans-orY, $top, $left, $background) {
+    &::before {
+      transform-origin: $trans-orX $trans-orY;
+      top: $top;
+      left: $left;
+      background: $background;    
+    }
+  }
